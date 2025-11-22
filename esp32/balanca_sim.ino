@@ -6,7 +6,7 @@
 #define WIFI_PASSWORD "SUA_SENHA_WIFI" // <-- ALTERAR
 
 // === 2. Configurações do Firebase ===
-#define FIREBASE_HOST "https://seu-projeto.firebaseio.com" // <-- VERIFICAR
+#define FIREBASE_HOST "https://seu-projeto.firebaseio.com" // <-- ALTERAR PARA A URL DO SEU PROJETO
 #define FIREBASE_AUTH "SEU TOKEN" // <-- ALTERAR PARA O SEU TOKEN
 
 // === 3. Caminhos no banco ===
