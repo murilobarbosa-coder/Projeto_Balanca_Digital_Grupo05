@@ -53,6 +53,22 @@ CREATE TABLE pesagem (
 -- Reativar checagem de FKs
 SET FOREIGN_KEY_CHECKS = 1;
 
+-- Inserir dados fictícios
+INSERT INTO responsavel (nome, cargo, setor, cpf) VALUES
+('Responsável 01', 'Tecnica', 'Manutencao', '30330330330'),
+('Responsável 02', 'Supervisor', 'Producao', '40440440440'),
+('Responsável 03', 'Analista', 'Qualidade', '50550550550');
+
+INSERT INTO balanca (status_balanca, descricao) VALUES
+('funcionando','Balanca 01'),
+('em uso','Balanca 02'),
+('manutencao','Balanca 03');
+
+INSERT INTO pesagem (valor_pesagem, data_hora, status_peso, responsavel_id_responsavel, balanca_id_balanca) VALUES
+(314.300, '2023-01-05 08:12:34', 'Normal', 1, 1),
+(110.000, '2023-01-12 09:05:11', 'Crítico', 2, 2),
+(205.000, '2024-01-23 10:22:45', 'Alerta', 3, 3);
+
 SELECT
   p.id_pesagem,
   p.valor_pesagem,
@@ -68,4 +84,5 @@ JOIN responsavel r ON p.responsavel_id_responsavel = r.id_responsavel
 JOIN balanca b ON p.balanca_id_balanca = b.id_balanca
 ORDER BY p.data_hora DESC;
 
+-- Tabela pesagem
 select * from pesagem;
