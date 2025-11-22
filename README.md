@@ -59,9 +59,6 @@ Para executar este projeto, você precisará configurar o ambiente de desenvolvi
 3.  *Importação nos arquivos principais:*  
     Os arquivos `app.dart` e `firebase_connector.dart` já estão configurados para importar essas credenciais automaticamente.
 
-3.  *Importação nos arquivos principais:*  
-    Os arquivos `app.dart` e `firebase_connector.dart` já estão configurados para importar essas credenciais automaticamente.
-
 ### Configuração do Código ESP32 (Simulação)
 
 O código ESP32 (simulação da balança) contém as credenciais de Wi-Fi e Firebase. *Atenção: Estas credenciais devem ser alteradas.*
