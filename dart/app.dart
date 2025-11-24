@@ -200,15 +200,14 @@ class ResponsavelCrud {
       default: cargo = 'Indefinido'; break;
     }
 
-    print('Escolha o setor: 1 - Vendas, 2 - Produção, 3 - Administrativo, 4 - Financeiro');
+    print('Escolha o setor: 1 - Manutenção, 2 - Produção, 3 - Qualidade, 4 - Logística');
     int setorNum = lerInt('Número do setor: ');
     String setor;
     switch (setorNum) {
-      case 1: setor = 'Vendas'; break;
+      case 1: setor = 'Manutenção'; break;
       case 2: setor = 'Produção'; break;
-      case 3: setor = 'Administrativo'; break;
-      case 4: setor = 'Financeiro'; break;
-      default: setor = 'Indefinido'; break;
+      case 3: setor = 'Qualidade'; break;
+      default: setor = 'Logística'; break;
     }
 
     String cpf = lerString('CPF: ');
@@ -281,14 +280,14 @@ class ResponsavelCrud {
     }
     // ... lógica similar para Setor ...
     
-    print('Escolha o novo setor: 1 - Vendas, 2 - Produção, 3 - Administrativo, 4 - Financeiro');
+    print('Escolha o novo setor: 1 - Manutenção, 2 - Produção, 3 - Qualidade, 4 - Logística');
     int setorNum = lerInt('Número do setor: ');
     String setor;
     switch (setorNum) {
-      case 1: setor = 'Vendas'; break;
+      case 1: setor = 'Manutenção'; break;
       case 2: setor = 'Produção'; break;
-      case 3: setor = 'Administrativo'; break;
-      case 4: setor = 'Financeiro'; break;
+      case 3: setor = 'Qualidade'; break;
+      case 4: setor = 'Logística'; break;
       default: setor = row.colByName('setor')?.toString() ?? 'Indefinido'; break;
     }
 
