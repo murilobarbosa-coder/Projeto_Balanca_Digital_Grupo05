@@ -189,25 +189,25 @@ class ResponsavelCrud {
   Future<void> criar() async {
     String nome = lerString('Nome: ');
     // Menus para escolher o cargo, convertendo o número digitado para o texto que vai para o banco.
-    print('Escolha o cargo: 1 - Gerente, 2 - Coordenador, 3 - Supervisor, 4 - Analista');
+    print('Escolha o cargo: 1 - Tecnico, 2 - Coordenador, 3 - Supervisor, 4 - Analista');
     int cargoNum = lerInt('Número do cargo: ');
     String cargo;
     switch (cargoNum) {
-      case 1: cargo = 'Gerente'; break;
+      case 1: cargo = 'Tecnico'; break;
       case 2: cargo = 'Coordenador'; break;
       case 3: cargo = 'Supervisor'; break;
       case 4: cargo = 'Analista'; break;
       default: cargo = 'Indefinido'; break;
     }
 
-    print('Escolha o setor: 1 - Manutenção, 2 - Produção, 3 - Qualidade, 4 - Logística');
+    print('Escolha o setor: 1 - Manutenaoo, 2 - Producao, 3 - Qualidade, 4 - Logistica');
     int setorNum = lerInt('Número do setor: ');
     String setor;
     switch (setorNum) {
-      case 1: setor = 'Manutenção'; break;
-      case 2: setor = 'Produção'; break;
+      case 1: setor = 'Manutencaoo'; break;
+      case 2: setor = 'Producaoo'; break;
       case 3: setor = 'Qualidade'; break;
-      default: setor = 'Logística'; break;
+      default: setor = 'Logistica'; break;
     }
 
     String cpf = lerString('CPF: ');
@@ -267,11 +267,11 @@ class ResponsavelCrud {
 
     // 2. Lógica para cargo e setor:
     // Se o usuário digitar um número **inválido**, o `default` pega o valor **antigo** do banco.
-    print('Escolha o novo cargo: 1 - Gerente, 2 - Coordenador, 3 - Supervisor, 4 - Analista');
+    print('Escolha o novo cargo: 1 - Tecnico, 2 - Coordenador, 3 - Supervisor, 4 - Analista');
     int cargoNum = lerInt('Número do cargo: ');
     String cargo;
     switch (cargoNum) {
-      case 1: cargo = 'Gerente'; break;
+      case 1: cargo = 'Tecnico'; break;
       case 2: cargo = 'Coordenador'; break;
       case 3: cargo = 'Supervisor'; break;
       case 4: cargo = 'Analista'; break;
@@ -280,14 +280,14 @@ class ResponsavelCrud {
     }
     // ... lógica similar para Setor ...
     
-    print('Escolha o novo setor: 1 - Manutenção, 2 - Produção, 3 - Qualidade, 4 - Logística');
+    print('Escolha o novo setor: 1 - Manutencao, 2 - Producao, 3 - Qualidade, 4 - Logistica');
     int setorNum = lerInt('Número do setor: ');
     String setor;
     switch (setorNum) {
-      case 1: setor = 'Manutenção'; break;
-      case 2: setor = 'Produção'; break;
+      case 1: setor = 'Manutencao'; break;
+      case 2: setor = 'Producao'; break;
       case 3: setor = 'Qualidade'; break;
-      case 4: setor = 'Logística'; break;
+      case 4: setor = 'Logistica'; break;
       default: setor = row.colByName('setor')?.toString() ?? 'Indefinido'; break;
     }
 
